@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Continent Quiz</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <small>VACATION QUIZ</small>
+        <p class="bigger">Results</p>
+        <i class="material-icons category">
+            category
+        </i>
+        <p class="bigger" style="text-align: center;">Your Score</p>
+        <big id="score"></big>
+        <a href="index.html">
+            <button class="finish" onclick="resetPoints()">Finish</button>
+        </a>
+    </div>
+    <script src="js/custom.js"></script>
+    <script>
+            var score = document.getElementById('score');
+            var convertedNum = Number(localStorage.getItem('points')).toLocaleString(undefined, {maximumFractionDigits:2});
+            score.innerHTML = `${convertedNum} points`;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+.wrap {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  min-height: 100vh; }
+  .wrap .preBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    margin: 0 auto; }
+    .wrap .preBtn button.next {
+      background-color: #088c50;
+      color: white;
+      border-radius: 0.25rem;
+      border-style: none;
+      padding: 15px 25px;
+      display: flex;
+      margin: 15px auto;
+      font-size: 1em;
+      width: 200px;
+      justify-content: center; }
+  .wrap .category {
+    font-size: 8rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    color: #004fa4; }
+  .wrap p.bigger {
+    font-size: 1.3em; }
+  .wrap a {
+    text-decoration: none; }
+  .wrap big {
+    font-size: 3em;
+    text-align: center;
+    display: block;
+    font-weight: 500; }
+  .wrap .finish {
+    border-color: #004fa4;
+    width: 80%;
+    margin: 20px auto;
+    color: #004fa4;
+    border-radius: 0.25rem;
+    border-style: none;
+    padding: 15px 25px;
+    display: block;
+    border: 1px solid;
+    background-color: white; }
+  .wrap .image-fluid {
+    max-width: 100%;
+    height: auto;
+    display: flex; }
+  .wrap .scores .score {
+    display: flex;
+    margin-bottom: 15px; }
+    .wrap .scores .score .place {
+      border: 1px solid #088c50;
+      display: inline-block;
+      border-radius: 0.25rem;
+      padding: 10px;
+      font-weight: bold;
+      color: #088c50; }
+    .wrap .scores .score .points_date {
+      margin-left: 15px; }
+      .wrap .scores .score .points_date .date {
+        font-size: 0.9rem;
+        color: #c9c9c9; }
+  .wrap .footer {
+    display: flex;
+    position: absolute;
+    bottom: 20px; }
+    .wrap .footer .home {
+      border-radius: 0.25rem;
+      padding: 10px 15px;
+      display: inline-block;
+      background: #004fa4;
+      color: white;
+      cursor: pointer; }
+    .wrap .footer .play {
+      display: flex;
+      line-height: 1.5;
+      border-radius: 10%;
+      padding: 10px 15px;
+      border-color: #088c50;
+      border: 1px solid #088c50;
+      color: #088c50;
+      margin-left: 15px;
+      font-weight: bold;
+      cursor: pointer; }
+      .wrap .footer .play i.material-icons {
+        margin-right: 5px; }
+  .wrap .answers {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 15px; }
+    .wrap .answers .answer {
+      display: block;
+      transition: 0.3s;
+      border: 1px solid #fdb53c;
+      border-radius: 0.25rem;
+      padding: 15px;
+      margin-bottom: 10px;
+      font-weight: bold;
+      cursor: pointer; }
+      .wrap .answers .answer:before {
+        font-family: "Material Icons";
+        content: "category";
+        color: #fdb53c;
+        margin-right: 15px;
+        font-size: 20px; }
+      .wrap .answers .answer:after {
+        font-size: 20px; }
+    .wrap .answers .answer.orange {
+      background-color: #fdb53c;
+      transition: 0.3s;
+      color: white; }
+      .wrap .answers .answer.orange:before {
+        color: white; }
+    .wrap .answers .answer.orange.correct:after {
+      font-family: "Material Icons";
+      content: "check";
+      color: #088c50;
+      display: inline-block;
+      float: right; }
+    .wrap .answers .answer.orange.wrong:after {
+      font-family: "Material Icons";
+      content: "close";
+      color: red;
+      display: inline-block;
+      float: right; }

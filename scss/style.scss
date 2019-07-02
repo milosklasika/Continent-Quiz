@@ -1,0 +1,166 @@
+$green: #088c50;
+$borderRadius: .25rem;
+$orange: #fdb53c;
+$blue: #004fa4;
+
+.wrap {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    min-height: 100vh;
+    .preBtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        margin: 0 auto;
+        button.next {
+            background-color: $green;
+            color: white;
+            border-radius: $borderRadius;
+            border-style: none;
+            padding: 15px 25px;
+            display: flex;
+            margin: 15px auto;
+            font-size: 1em;
+            width: 200px;
+            justify-content: center;
+        }
+    }
+    .category {
+        font-size: 8rem;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        color: $blue;
+    }
+    p.bigger {
+        font-size: 1.3em;
+    }
+    a {
+        text-decoration: none;
+    }
+    big {
+        font-size: 3em;
+        text-align: center;
+        display: block;
+        font-weight: 500;
+    }
+    .finish {
+        border-color: $blue;
+        width: 80%;
+        margin: 20px auto;
+        color: $blue;
+        border-radius: $borderRadius;
+        border-style: none;
+        padding: 15px 25px;
+        display: block;
+        border: 1px solid;
+        background-color: white;
+    }
+    .image-fluid {
+        max-width: 100%;
+        height: auto;
+        display: flex;
+    }
+    .scores {
+        .score {
+            display: flex;
+            margin-bottom: 15px;
+            .place {
+                border: 1px solid $green;
+                display: inline-block;
+                border-radius: $borderRadius;
+                padding: 10px;
+                font-weight: bold;
+                color: $green;
+            }
+            .points_date {
+                margin-left: 15px;
+                .date {
+                    font-size: 0.9rem;
+                    color: #c9c9c9;
+                }
+            }
+        }
+    }
+    .footer {
+        display: flex;
+        position: absolute;
+        bottom: 20px;
+        .home {
+            border-radius: $borderRadius;
+            padding: 10px 15px;
+            display: inline-block;
+            background: #004fa4;
+            color: white;
+            cursor: pointer;
+        }
+        .play {
+            display: flex;
+            line-height: 1.5;
+            border-radius: 10%;
+            padding: 10px 15px;
+            border-color: $green;
+            border: 1px solid $green;
+            color: $green;
+            margin-left: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            i.material-icons {
+                margin-right: 5px;
+            }
+        }
+    }
+    .answers {
+        width: 90%; 
+        margin: 0 auto;
+        margin-top: 15px;
+        .answer {
+            display: block;
+            transition: 0.3s;
+            border: 1px solid $orange;
+            border-radius: $borderRadius;
+            padding: 15px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            &:before {
+                font-family: "Material Icons";
+                content: "category";
+                color: $orange;
+                margin-right: 15px;
+                font-size: 20px;
+            }
+            &:after {
+                font-size: 20px;
+            }
+        }
+        .answer.orange {
+            background-color: #fdb53c;
+            transition: 0.3s;
+            color: white;
+            &:before {
+                color: white;
+            }
+        }
+        .answer.orange.correct {
+            &:after {
+                font-family: "Material Icons";
+                content: "check";
+                color: $green;
+                display: inline-block;
+                float: right;
+            }
+        }
+        .answer.orange.wrong {
+            &:after {
+                font-family: "Material Icons";
+                content: "close";
+                color: red;
+                display: inline-block;
+                float: right;
+            }
+        }
+    }
+}
