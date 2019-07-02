@@ -5,6 +5,7 @@ var outputImg = document.getElementById('output');
 var counter = document.getElementById('counter');
 var date = document.querySelectorAll('.date');
 var pointsMade = document.querySelectorAll('.pointsMade');
+var preBtn = document.querySelectorAll('a.preBtn');
 
 var step = Number(localStorage.getItem('step'));
 if (!step) {
@@ -33,7 +34,7 @@ if (step > 5) {
             return continents.indexOf(item) >= index;
         });
 
-        let randomName = continentsUnique.sort(() => .5 - Math.random()).slice(0, 3);
+        let randomName = continentsUnique.sort(() => Math.random()).slice(0, 3);
 
         var randomImage = el.filter(s => s.continent === randomName[Math.round(Math.random() * 2)]);
         var singleContinent = randomImage.slice(0, 1);
@@ -59,6 +60,18 @@ if (step > 5) {
             points = 0;
         }
 
+        for (let i = 0; i < preBtn.length; i++) {
+            preBtn[i].onclick = function (e) { 
+                if(click != 0){
+                    return true;
+                } else {
+                    alert('Please select one of the answers');
+                    e.preventDefault();
+                    return;
+                }
+             }
+        }
+        
         var answer = document.querySelectorAll('.answer');
         for (let i = 0; i < answer.length; i++) {
             answer[i].onclick = function name(params) {
@@ -73,10 +86,11 @@ if (step > 5) {
                     }
                     step++;
                     localStorage.setItem('step', step);
-                }
+                } 
                 click++;
             }
         }
+        console.log(click);
     });
 }
 
@@ -120,13 +134,14 @@ function resetPoints() {
 
 var results = JSON.parse(localStorage.getItem("quiz_result"));
 for (let i = 0; i < results.length; i++) {
-    if (date[i]) {
-        date[i].innerHTML = results[i].date;
-    }
+ 
     var num = Number(results[i].points).toLocaleString(undefined, {
         maximumFractionDigits: 2
     });
-    if (pointsMade[i]) {
+    if (pointsMade[i] && date[i]) {
+        date[i].innerHTML = results[i].date;
         pointsMade[i].innerHTML = `${num} pts`;
     }
 }
+
+
